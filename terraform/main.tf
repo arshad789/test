@@ -8,3 +8,8 @@ module "ec2_instance" {
   instance_type = var.instance_type
   ami           = var.ami
 }
+
+module "s3_bucket" {
+  source      = "github.com/arshad789/test/terraform/modules/s3"
+  bucket_name = var.bucket_name
+}
