@@ -4,9 +4,6 @@ variable "table_name" {
   description = "The name of the DynamoDB table"
 }
 
-
-
-
 resource "aws_dynamodb_table" "example" {
   name           = var.table_name
   billing_mode   = "PAY_PER_REQUEST"
@@ -16,10 +13,8 @@ resource "aws_dynamodb_table" "example" {
     type = "S"  # S for string, N for number
   }
 
-  key_schema {
-    attribute_name = "id"
-    key_type       = "HASH"
+  key {
+    name = "id"
+    type = "HASH"
   }
-
- 
 }
