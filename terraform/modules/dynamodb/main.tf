@@ -12,5 +12,4 @@ resource "aws_dynamodb_table" "example" {
 output "table_id" {
   value = aws_dynamodb_table.example.id
   description = "The ID of the DynamoDB table"
-  type = string
 }
