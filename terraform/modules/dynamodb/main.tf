@@ -8,7 +8,7 @@ variable "table_name" {
 
 
 resource "aws_dynamodb_table" "example" {
-  name           = "var.table_name"
+  name           = var.table_name
   billing_mode   = "PAY_PER_REQUEST"
   
   attribute {
