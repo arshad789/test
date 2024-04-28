@@ -7,14 +7,8 @@ variable "table_name" {
 resource "aws_dynamodb_table" "example" {
   name           = var.table_name
   billing_mode   = "PAY_PER_REQUEST"
-  
+  hash_key       = "LockID"
   attribute {
-    name = "id"
-    type = "S"  # S for string, N for number
-  }
-
-  key {
-    name = "id"
-    type = "HASH"
-  }
+    name = "LockID"
+    type = "S"
 }
