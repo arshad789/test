@@ -9,7 +9,3 @@ resource "aws_dynamodb_table" "example" {
   billing_mode = "PAY_PER_REQUEST"
 }
 
-output "table_id" {
-  value = aws_dynamodb_table.example.id
-  description = "The ID of the DynamoDB table"
-}
