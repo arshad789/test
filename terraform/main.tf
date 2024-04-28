@@ -1,6 +1,6 @@
 variable "instance_type" {}
 variable "ami" {}
-
+variable " bucket_name" {}
 
 
 module "ec2_instance" {
